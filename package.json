@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@uiw/codemirror-theme-abcdef": "^4.23.7",
+    "@uiw/codemirror-theme-dracula": "^4.23.7"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  }
+}

@@ -1,26 +1,28 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Dashboard from "./components/Dashboard";
-import CodeEditor from './components/CodeEditor';
-import ProblemLibrary from './components/ProblemLibrary';
-import Profile from './components/Profile';
-import Header from './Components/Header';
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./Components/layout";
+import DashboardPage from "./pages/DashboardPage";
+import EditorPage from "./pages/EditorPage";
+import LibraryPage from "./pages/LibraryPage";
+import ProfilePage from "./pages/ProfilePage";
+import LandingPage from "./pages/LandingPage";
+import { UserProvider } from "./context/UserContext"; // Import UserProvider
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/editor" element={<CodeEditor />} />
-        <Route path="/library" element={<ProblemLibrary />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <UserProvider>  {/* Wrap the whole app in the UserProvider */}
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/editor" element={<EditorPage />} />
+            <Route path="/library" element={<LibraryPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </UserProvider>
   );
 };
 

@@ -1,35 +1,40 @@
-import React, { useState } from 'react';
-import Editor from "@monaco-editor/react";
+import React, { useState } from "react";
+import CodeMirror from "@uiw/react-codemirror";
+import { javascript } from "@codemirror/lang-javascript";
+import { python } from "@codemirror/lang-python";
+import { dracula } from "@uiw/codemirror-theme-dracula";
+import { abcdef } from "@uiw/codemirror-theme-abcdef";
 
-const CodeEditor = () => {
-  const [code, setCode] = useState('');
 
-  const handleEditorChange = (value) => {
-    setCode(value);
-  };
+const CodeEditor = ({ initialCode = "", language = "javascript", onRun }) => {
+  const [code, setCode] = useState(initialCode);
 
-  const handleRunCode = () => {
-    console.log('Code to run:', code);
-    // Add functionality to run the code here, e.g., via an API call or in-browser execution
+  // Language configuration
+  const languageSupport = language === "python" ? python() : javascript();
+
+  const handleRun = () => {
+    if (onRun) {
+      onRun(code); // Pass code to parent component
+    }
   };
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold">Code Editor</h1>
-      <div className="my-4">
-        <Editor
-          height="400px"
-          defaultLanguage="javascript"
-          defaultValue="// Write your code here"
-          onChange={handleEditorChange}
-        />
+    <div className="flex flex-col h-full">
+      <CodeMirror
+        value={code}
+        height="400px"
+        theme={dracula}
+        extensions={[languageSupport]}
+        onChange={(value) => setCode(value)}
+      />
+      <div className="mt-4 text-right">
+        <button
+          onClick={handleRun}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Run Code
+        </button>
       </div>
-      <button
-        onClick={handleRunCode}
-        className="bg-blue-500 text-white px-6 py-2 rounded mt-4"
-      >
-        Run Code
-      </button>
     </div>
   );
 };
