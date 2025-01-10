@@ -1,1 +1,2 @@
 # CodeElevate
+DSA Learning Platform
