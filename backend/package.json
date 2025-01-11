@@ -1,0 +1,16 @@
+{
+    "name": "Code-Elevate",
+    "version": "1.0.0",
+    "description": "Elevate your coding skills with personalized learning and hands-on problem-solving. Join a community of dedicated learners today!",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "body-parser": "^1.19.0"
+    },
+    "devDependencies": {},
+    "author": "Chintamani Joshi, Karthikeya Thatimpula, Dhanshree Tiwarekar, Sneha Singh",
+    "license": "ISC"
+  }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Progress Page</title>
+    <link rel="stylesheet" href="progress.css">
+</head>
+<body>
+    <div class="progress-page">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Welcome Back, <span class="username">Learner</span>!</h1>
+            <p>Track your DSA progress and keep leveling up.</p>
+        </header>
+        <a href="dashboard.html" class="arrow-button">
+            &#8592; Dashboard
+        </a>
+        
+
+        <!-- Overall Progress Section -->
+        <section class="overall-progress">
+            <h2>Your Overall Progress</h2>
+            <div class="progress-circle">
+                <div class="circle">
+                    <div class="inner-circle">
+                        <p class="progress-percentage">72%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestones Section -->
+        <section class="milestones">
+            <h2>Completed Milestones</h2>
+            <div class="milestone-list">
+                <div class="milestone">
+                    <h3>Arrays Mastered</h3>
+                    <p>Solved 50/50 problems</p>
+                </div>
+                <div class="milestone">
+                    <h3>Graph Basics</h3>
+                    <p>Solved 20/20 problems</p>
+                </div>
+                <div class="milestone">
+                    <h3>Recursion and Backtracking</h3>
+                    <p>Solved 15/30 problems</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly Activity Section -->
+        <section class="weekly-progress">
+            <h2>Weekly Activity</h2>
+            <canvas id="weeklyChart" style="width: 300px; height: 90px;"></canvas>
+
+        </section>
+
+        <!-- Areas of Improvement -->
+        <section class="improvement">
+            <h2>Areas of Improvement</h2>
+            <ul>
+                <li>Dynamic Programming - Only 30% complete</li>
+                <li>Advanced Graphs - Solved 10/40 problems</li>
+                <li>Segment Trees - Need more practice</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+    <footer class="footer">
+        <p>&copy; 2025 CodeElevate. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </footer>
+</body>
+</html>

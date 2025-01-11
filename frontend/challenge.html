@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges - CodeElevate</title>
+    <link rel="stylesheet" href="challenge.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="challenges-container">
+        <!-- Header -->
+        <header>
+            <h1>Welcome to Challenges</h1>
+            <p>Test your skills and conquer DSA with exciting challenges!</p>
+        </header>
+        <a href="dashboard.html" class="arrow-button">
+            &#8592; Dashboard
+        </a>
+        
+
+        <!-- Categories -->
+        <section class="challenges-categories">
+            <div class="category-card">
+                <h2>Daily Challenge</h2>
+                <p>Start your day with a new challenge. Complete it before midnight!</p>
+                <button onclick="startChallenge('daily')">Start Now</button>
+            </div>
+            <div class="category-card">
+                <h2>Weekly Challenge</h2>
+                <p>Push your limits with a more in-depth challenge for the week.</p>
+                <button onclick="startChallenge('weekly')">Start Now</button>
+            </div>
+            <div class="category-card">
+                <h2>All-Time Best</h2>
+                <p>Attempt the toughest challenges solved by top learners.</p>
+                <button onclick="startChallenge('all-time')">Start Now</button>
+            </div>
+        </section>
+
+        <!-- Leaderboard -->
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>User</th>
+                        <th>Challenges Completed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>JohnDoe</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>JaneSmith</td>
+                        <td>115</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>CodeMaster</td>
+                        <td>110</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        function startChallenge(type) {
+            alert(`Starting ${type} challenge!`);
+            // Add logic to navigate or start the challenge
+        }
+        </script>
+        <footer class="footer">
+            <p>&copy; 2025 CodeElevate. All Rights Reserved.</p>
+            <div class="social-links">
+              <a href="#">Twitter</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">GitHub</a>
+            </div>
+          </footer>
+</body>
+</html>

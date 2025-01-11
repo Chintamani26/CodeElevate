@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> CodeElevate - Ultimate DSA </h1>
+        </header>
+        <a href="dashboard.html" class="arrow-button">
+            &#8592; Dashboard
+        </a>
+        
+
+        <!-- Question Selector -->
+        <div class="question-section">
+            <label for="question-select">Choose a Question:</label>
+            <select id="question-select">
+                <option value="" disabled selected>Select a question</option>
+                <option value="1">Find the maximum subarray sum</option>
+                <option value="2">Reverse a linked list</option>
+                <option value="3">Implement a binary search</option>
+            </select>
+        </div>
+
+        <!-- Code Editor -->
+        <div class="editor-section">
+            <label for="language-select">Programming Language:</label>
+            <select id="language-select">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="C++">C++</option>
+                <option value="C">C</option>
+            </select>
+            <br/>
+
+            <textarea id="code-editor" placeholder="Write your code here..."></textarea>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer-section">
+            <p>Time Spent: <span id="timer">00:00</span></p>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="submit-btn">Submit Answer</button>
+
+        <!-- Result -->
+        <div id="result" class="result-section">
+            <h2>Result:</h2>
+            <p id="time-taken"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer class="footer">
+        <p>&copy; 2025 CodeElevate. All Rights Reserved.</p>
+        <div class="social-links">
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </footer>
+</body>
+</html>

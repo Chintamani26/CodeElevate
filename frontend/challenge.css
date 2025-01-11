@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.challenges-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #00ffc5;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+.challenges-categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.category-card {
+    flex: 1;
+    background: #1e1e1e;
+    border: 1px solid #00ffc5;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    background: #2c2c2c;
+}
+
+.category-card h2 {
+    font-size: 1.8rem;
+    color: #00ffc5;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.category-card button {
+    background: #00ffc5;
+    border: none;
+    padding: 10px 20px;
+    color: #121212;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.category-card button:hover {
+    background: #00d3a5;
+}
+
+.leaderboard {
+    background: #1e1e1e;
+    border: 1px solid #00ffc5;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.leaderboard h2 {
+    font-size: 1.8rem;
+    color: #00ffc5;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #2c2c2c;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #00ffc5;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+tbody tr:hover {
+    background: #2c2c2c;
+}
+.arrow-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333; /* Dark theme */
+    color: #fff; /* Text color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.arrow-button:hover {
+    background-color: #555; /* Slightly lighter */
+    color: #f0f0f0;
+    transform: translateY(-2px);
+}
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .footer .social-links a {
+    margin: 0 10px;
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
